@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Project #1 - Tadjiev Mukhammadkhon -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Nasa API</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+</head>
+
+<body onload="startUp()">
+    <div class="container">
+        <!-- Left div -->
+        <div class="left"></div>
+
+        <!-- Right div -->
+        <div class="right">
+            <div class="formBox">
+                <p>
+                    Select the date and click on Retrieve to obtain more data about the Nasa:
+                </p>
+                <form>
+                    <select id="monthDrop">
+                        <option value="0">Month</option>
+                    </select>
+                    <select id="dayDrop">
+                        <option value="0">Day</option>
+                    </select>
+                    <select id="yearDrop">
+                        <option value="0">Year</option>
+                    </select>
+                    <input type="button" value="Retrieve" onclick="getBaseballDataSynch();">
+                </form>
+            </div>
+
+            <!-- Result Box -->
+            <div class="retrieveBox">
+                <label>Home Team Name</label>
+                <input type="text" id="homeTeamName">
+                <label>Away Team Name</label>
+                <input type="text" id="awayTeamName">
+                <label>Winning Pitcher</label>
+                <input type="text" id="winningPitcher">
+                <label>Losing Pitcher</label>
+                <input type="text" id="losingPitcher">
+                <label>Venue</label>
+                <input type="text" id="venue">
+                <input type="button" value="Previous Game" id="previousGame" disabled onclick="navButtons('prev');">
+                <input type="button" value="Next Game" id="nextGame" disabled onclick="navButtons('next');">
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
